@@ -151,7 +151,7 @@ endif ()
 
 # Only build shared libs for MSVC
 if (MSVC)
-  set(BUILD_SHARED_LIBS ON)
+  set(BUILD_SHARED_LIBS ON CACHE)
 endif()
 
 
