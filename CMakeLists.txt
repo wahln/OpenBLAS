@@ -133,7 +133,7 @@ if (NOT NOFORTRAN AND NOT NO_LAPACK)
 endif ()
 
 # Only generate .def for dll on MSVC and always produce pdb files for debug and release
-if(MSVC)
+if(MSVC AND BUILD_SHARED_LIBS)
   if (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} LESS 3.4)
     set(OpenBLAS_DEF_FILE "${PROJECT_BINARY_DIR}/openblas.def")
   endif()
